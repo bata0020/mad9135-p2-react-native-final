@@ -27,7 +27,7 @@ function HomeScreenNav() {
         tabBarActiveTintColor: "#fff",
         tabBarInactiveTintColor: "#808080",
       }}
-      style={{ backgroundColor: "#e2e2e2" }}
+      style={{ backgroundColor: "#e2e2e2", paddingTop: 4 }}
     >
       <Tab.Screen name="Upcoming" component={UpcomingScreen} />
       <Tab.Screen name="Past" component={PastScreen} />

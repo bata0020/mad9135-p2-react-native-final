@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
     paddingBottom: 8,
-    paddingTop: 2,
+    paddingTop: 3,
     backgroundColor: "#e2e2e2",
   },
   image: {
