@@ -1,7 +1,7 @@
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import UpcomingScreen from "../UpcomingScreen/UpcomingScreen";
-import PastScreen from "../PastScreen/PastScreen";
-import FavoritesScreen from "../FavoritesScreen/FavoritesScreen";
+import UpcomingScreen from "../../components/UpcomingScreen/UpcomingScreen";
+import PastScreen from "../../components/PastScreen/PastScreen";
+import FavoritesScreen from "../../components/FavoritesScreen/FavoritesScreen";
 
 const Tab = createMaterialTopTabNavigator();
 
