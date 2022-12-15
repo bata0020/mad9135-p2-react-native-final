@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from "react-native";
 import { useTutors } from "../../context/tutorContext";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { TapGestureHandler } from "react-native-gesture-handler";
 import Animated, {
