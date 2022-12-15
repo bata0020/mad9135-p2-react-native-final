@@ -69,7 +69,7 @@ function TutorInfoScreen({ route }) {
                   <MaterialIcons
                     name="favorite"
                     size={33}
-                    color="#b0b0b0"
+                    color="#fff"
                     style={styles.favIcon}
                   />
                 )}
@@ -92,7 +92,7 @@ function TutorInfoScreen({ route }) {
               locale={"en-CA"}
               display={"inline"}
               mode={"date"}
-              minimumDate={new Date(2022, 11, 11)}
+              minimumDate={new Date(2022, 11, 16)}
               maximumDate={new Date(2022, 12, 20)}
               value={new Date()}
               style={{

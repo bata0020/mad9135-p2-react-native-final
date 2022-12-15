@@ -37,7 +37,8 @@ function SessionCard({ session }) {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    paddingVertical: 6,
+    paddingBottom: 8,
+    paddingTop: 2,
     backgroundColor: "#e2e2e2",
   },
   image: {

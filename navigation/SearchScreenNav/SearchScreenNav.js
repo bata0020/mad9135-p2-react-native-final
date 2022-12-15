@@ -14,7 +14,6 @@ function SearchScreenNav() {
         headerTintColor: "#fff",
         headerTitleStyle: {
           fontSize: 16,
-          fontWeight: "bold",
         },
       }}
     >

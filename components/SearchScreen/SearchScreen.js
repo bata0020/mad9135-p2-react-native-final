@@ -11,11 +11,11 @@ import {
   Alert,
 } from "react-native";
 import { useState, useEffect } from "react";
-import { useTutor } from "../../context/tutorContext";
+import { useTutors } from "../../context/tutorContext";
 import TutorCard from "../TutorCard/TutorCard";
 
 function SearchScreen({ navigation }) {
-  const [tutorsAll] = useTutor();
+  const [tutorsAll] = useTutors();
   const [searchValue, setSearchValue] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [loading, setLoading] = useState(true);

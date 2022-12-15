@@ -36,20 +36,13 @@ export default function App() {
               headerTintColor: "#fff",
               headerTitleStyle: {
                 fontSize: 16,
-                fontWeight: "bold",
               },
               tabBarStyle: { backgroundColor: "#10403B" },
               tabBarActiveTintColor: "#fff",
               tabBarInactiveTintColor: "#bfbfbf",
             })}
           >
-            <Tab.Screen
-              name="Dashboard"
-              component={HomeScreenNav}
-              options={{
-                headerShown: false,
-              }}
-            />
+            <Tab.Screen name="Dashboard" component={HomeScreenNav} />
             <Tab.Screen
               name="Search"
               component={SearchScreenNav}

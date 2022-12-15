@@ -1,11 +1,11 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, StyleSheet, FlatList } from "react-native";
 import { useEffect, useState } from "react";
-import { useTutor } from "../../context/tutorContext";
-import TutorItem from "../TutorItem/TutorItem";
+import { useTutors } from "../../context/tutorContext";
+import TutorCard from "../TutorCard/TutorCard";
 
 function FavoritesScreen() {
-  const [tutors] = useTutor();
+  const [tutors] = useTutors();
   const [favoriteTutor, setFavoriteTutor] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function FavoritesScreen() {
         <FlatList
           data={faves}
           renderItem={({ item }) => (
-            <TutorItem
+            <TutorCard
               tutor={item}
               onLongPress={() => console.log((item.favorite = !item.favorite))}
             />
