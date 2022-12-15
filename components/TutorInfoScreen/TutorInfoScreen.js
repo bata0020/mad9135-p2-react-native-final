@@ -23,9 +23,8 @@ const AnimatedIcon = Animated.createAnimatedComponent(MaterialIcons);
 
 function TutorInfoScreen({ route }) {
   const [data] = useTutors();
-  const [heartIcon, setHeartIcon] = useState(false);
-
   const [tutor, setTutor] = useState({});
+  const [heartIcon, setHeartIcon] = useState(false);
 
   useEffect(() => {
     setTutor(data.find((item) => item.id === route.params.id));
@@ -67,21 +66,6 @@ function TutorInfoScreen({ route }) {
                     borderColor: "#fff",
                   }}
                 />
-                {tutor.favorite === false ? (
-                  <MaterialIcons
-                    name="favorite"
-                    size={33}
-                    color="#fff"
-                    style={styles.favIcon}
-                  />
-                ) : (
-                  <MaterialIcons
-                    name="favorite"
-                    size={33}
-                    color="#red"
-                    style={styles.favIcon}
-                  />
-                )}
                 {heartIcon ? (
                   <AnimatedIcon
                     name="favorite"
