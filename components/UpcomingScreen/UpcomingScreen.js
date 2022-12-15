@@ -5,7 +5,7 @@ import { upcomingSessions } from "../../dataSource/data";
 
 import SessionItem from "../SessionItem/SessionItem";
 
-function UpcomingScreen({ navigation }) {
+function UpcomingScreen() {
   const [sessions, setSessions] = useState([]);
 
   useEffect(() => {
@@ -21,14 +21,7 @@ function UpcomingScreen({ navigation }) {
           data={sessions.sort((a, b) => {
             return a.schedule > b.schedule ? 1 : -1;
           })}
-          renderItem={({ item }) => (
-            <SessionItem
-              session={item}
-              onPress={() =>
-                navigation.navigate("SessionDetails", { id: item.id })
-              }
-            />
-          )}
+          renderItem={({ item }) => <SessionItem session={item} />}
           keyExtractor={(item) => item.id}
         />
       </SafeAreaView>
