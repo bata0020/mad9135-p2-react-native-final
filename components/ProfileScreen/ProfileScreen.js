@@ -45,10 +45,13 @@ function ProfileScreen() {
   return (
     <SafeAreaView style={styles.container} edges={["right", "left"]}>
       <Image
-        source={require("../../assets/mind-blown.png")}
+        source={require("../../assets/bg1.jpg")}
         style={[StyleSheet.absoluteFill, styles.blur]}
       />
-      <BlurView intensity={100}>
+      <BlurView
+        intensity={8}
+        style={{ alignItems: "center", justifyContent: "center" }}
+      >
         {image ? (
           <Image source={{ uri: image }} style={styles.image} />
         ) : (

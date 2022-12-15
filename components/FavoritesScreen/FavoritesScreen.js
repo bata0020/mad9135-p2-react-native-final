@@ -12,7 +12,7 @@ function FavoritesScreen() {
   useFocusEffect(
     useCallback(() => {
       setFavoriteTutor(data);
-    }, [data])
+    }, [])
   );
 
   const faves = favoriteTutor.filter((person) => person.favorite === true);
