@@ -6,6 +6,7 @@ import {
   ImageBackground,
   Button,
   ScrollView,
+  Alert,
 } from "react-native";
 import { useTutors } from "../../context/tutorContext";
 import { useState, useCallback } from "react";
@@ -21,10 +22,11 @@ import { MaterialIcons } from "@expo/vector-icons";
 const AnimatedIcon = Animated.createAnimatedComponent(MaterialIcons);
 
 function TutorInfoScreen({ route }) {
-  const [allTutors] = useTutors();
-  const tutor = allTutors.find((item) => item.id === route.params.id);
-
+  const [data] = useTutors();
   const [heartIcon, setHeartIcon] = useState(false);
+
+  const tutor = data.find((item) => item.id === route.params.id);
+
   const scale = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -38,6 +40,7 @@ function TutorInfoScreen({ route }) {
       }
     });
     setHeartIcon(!heartIcon);
+    console.log((tutor.favorite = !tutor.favorite));
   }, [heartIcon]);
 
   if (!tutor) {
@@ -117,7 +120,15 @@ function TutorInfoScreen({ route }) {
               }}
             />
           </View>
-          <Button title="Book" style={styles.button} />
+          <Button
+            title="Book"
+            style={styles.button}
+            onPress={() =>
+              Alert.alert("Booked!", "Tutorial session has been booked.", [
+                { text: "OK", style: "default" },
+              ])
+            }
+          />
         </ScrollView>
       </SafeAreaView>
     );

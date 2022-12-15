@@ -8,7 +8,7 @@ function TutorProvider(props) {
 
   useEffect(() => {
     setData(allTutors);
-  }, []);
+  }, [allTutors]);
 
   return <TutorContext.Provider value={[data]} {...props} />;
 }

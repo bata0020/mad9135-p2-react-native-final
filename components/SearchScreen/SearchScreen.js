@@ -15,7 +15,7 @@ import { useTutors } from "../../context/tutorContext";
 import TutorCard from "../TutorCard/TutorCard";
 
 function SearchScreen({ navigation }) {
-  const [tutorsAll] = useTutors();
+  const [data] = useTutors();
   const [searchValue, setSearchValue] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,10 +26,6 @@ function SearchScreen({ navigation }) {
     }
   }, [searchValue]);
 
-  function toggleFav(person) {
-    person.favorite = !person.favorite;
-  }
-
   function handleSubmit() {
     if (!searchValue) {
       return null;
@@ -37,7 +33,7 @@ function SearchScreen({ navigation }) {
       setTimeout(() => {
         setLoading(false);
       }, 800);
-      const result = tutorsAll.filter((object) => {
+      const result = data.filter((object) => {
         return (
           object.tutor.toLowerCase().includes(searchValue.toLowerCase()) ||
           object.program.toLowerCase().includes(searchValue.toLowerCase()) ||

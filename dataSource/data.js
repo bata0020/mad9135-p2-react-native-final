@@ -126,7 +126,7 @@ const allTutors = [
   {
     id: 5,
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=300&w=300&s=707b9c33066bf8808c934c8ab394dff6",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=720&w=720&s=707b9c33066bf8808c934c8ab394dff6",
     tutor: "Tara Torch",
     program: "Interactive Media Design",
     school: "Algonquin College",
@@ -137,7 +137,7 @@ const allTutors = [
   {
     id: 7,
     image:
-      "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?h=400&w=400&cs=tinysrgb",
+      "https://images.pexels.com/photos/1858175/pexels-photo-1858175.jpeg?h=720&w=720&cs=tinysrgb",
     tutor: "Brenda Barnes",
     program: "Mobile Application Design and Development",
     school: "Algonquin College",
@@ -176,7 +176,7 @@ const allTutors = [
     school: "Hogwarts School",
     course: ["WIZ1001", "WIZ1012", "WIZ1123", "WIZ2312", "MAG1122", "MAG5679"],
     tag: "wiz",
-    favorite: false,
+    favorite: true,
   },
   {
     id: 6,
