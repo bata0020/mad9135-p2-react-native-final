@@ -15,14 +15,14 @@ function SessionCard({ session }) {
           </View>
           <View style={styles.appointment}>
             <View style={styles.appointmentDate}>
-              <Ionicons name="md-calendar-sharp" size={18} color="#8F4239" />
+              <Ionicons name="md-calendar-sharp" size={18} color="#016064" />
               <Text style={styles.date}>{session.date}</Text>
             </View>
             <View style={styles.appointmentTime}>
               <Ionicons
                 name="ios-time-outline"
                 size={18}
-                color="#8F4239"
+                color="#016064"
                 style={styles.icon}
               />
               <Text style={styles.time}>{session.time}</Text>
@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
   },
   name: {
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: "bold",
-    paddingBottom: 2,
+    paddingBottom: 3,
   },
   program: {
     fontSize: 16,
-    paddingBottom: 12,
+    paddingBottom: 13,
   },
   appointment: {
     flexDirection: "row",

@@ -1,7 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, StyleSheet, FlatList } from "react-native";
-import { useCallback, useEffect, useState } from "react";
-import { useFocusEffect } from "@react-navigation/native";
+import { useEffect, useState } from "react";
 import { useTutors } from "../../context/tutorContext";
 import TutorCard from "../TutorCard/TutorCard";
 
@@ -9,11 +8,9 @@ function FavoritesScreen() {
   const [data] = useTutors();
   const [favoriteTutor, setFavoriteTutor] = useState([]);
 
-  useFocusEffect(
-    useCallback(() => {
-      setFavoriteTutor(data);
-    }, [])
-  );
+  useEffect(() => {
+    setFavoriteTutor(data);
+  }, []);
 
   const faves = favoriteTutor.filter((person) => person.favorite === true);
 

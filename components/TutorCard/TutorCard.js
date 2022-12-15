@@ -12,7 +12,6 @@ function TutorCard({ tutor, onPress }) {
             <Text style={styles.name}>{tutor.tutor}</Text>
             <Text style={styles.program}>{tutor.program}</Text>
             <Text style={styles.school}>{tutor.school}</Text>
-            <Text>{tutor.course}</Text>
           </View>
         </View>
       </Pressable>
@@ -23,15 +22,16 @@ function TutorCard({ tutor, onPress }) {
 const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 10,
-    paddingVertical: 6,
+    paddingBottom: 8,
+    paddingTop: 2,
     backgroundColor: "#e2e2e2",
   },
   image: {
     height: 120,
     width: 120,
     borderRadius: 60,
-    borderWidth: 1.5,
-    borderColor: "#957171",
+    borderWidth: 2,
+    borderColor: "#728C8A",
   },
   card: {
     backgroundColor: "#fff",
@@ -52,16 +52,16 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
   },
   name: {
-    fontSize: 18,
+    fontSize: 19,
     fontWeight: "bold",
     paddingBottom: 2,
   },
   program: {
     fontSize: 16,
+    paddingBottom: 6,
   },
   school: {
-    fontSize: 16,
-    paddingBottom: 8,
+    fontSize: 15,
   },
 });
 

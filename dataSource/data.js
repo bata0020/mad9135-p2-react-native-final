@@ -170,8 +170,8 @@ const allTutors = [
   {
     id: 3,
     image:
-      "https://images.pexels.com/photos/1405963/pexels-photo-1405963.jpeg?h=400&w=400&cs=tinysrgb",
-    tutor: "Harry Holler",
+      "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?h=720&w=720&cs=tinysrgb",
+    tutor: "Harry Holder",
     program: "Defense Against The Dark Arts",
     school: "Hogwarts School",
     course: ["WIZ1001", "WIZ1012", "WIZ1123", "WIZ2312", "MAG1122", "MAG5679"],
@@ -181,7 +181,7 @@ const allTutors = [
   {
     id: 6,
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=300&w=300&s=a72ca28288878f8404a795f39642a46f",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=720&w=720&s=a72ca28288878f8404a795f39642a46f",
     tutor: "Vincent Valdez",
     program: "UX Design",
     school: "Algonquin College",
@@ -192,7 +192,7 @@ const allTutors = [
   {
     id: 4,
     image:
-      "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?h=400&w=400&cs=tinysrgb",
+      "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?h=720&w=720&cs=tinysrgb",
     tutor: "Randy Reynaldo",
     program: "Mobile Application Design and Development",
     school: "Algonquin College",
