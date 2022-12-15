@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import { useState, useEffect } from "react";
 import { useTutor } from "../../context/tutorContext";
-import TutorItem from "../TutorItem/TutorItem";
+import TutorCard from "../TutorCard/TutorCard";
 
 function SearchScreen({ navigation }) {
   const [tutorsAll] = useTutor();
@@ -98,7 +98,7 @@ function SearchScreen({ navigation }) {
               return a.id > b.id ? 1 : -1;
             })}
             renderItem={({ item }) => (
-              <TutorItem
+              <TutorCard
                 tutor={item}
                 onPress={() => navigation.navigate("Details", { id: item.id })}
               />

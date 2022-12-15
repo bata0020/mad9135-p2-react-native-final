@@ -1,5 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import SearchScreen from "../SearchScreen/SearchScreen";
+import SearchScreen from "../../components/SearchScreen/SearchScreen";
 import TutorInfoScreen from "../TutorInfoScreen/TutorInfoScreen";
 
 const Stack = createStackNavigator();
