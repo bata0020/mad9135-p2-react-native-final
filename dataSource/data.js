@@ -173,7 +173,7 @@ const allTutors = [
       "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?h=720&w=720&cs=tinysrgb",
     tutor: "Harry Holder",
     program: "Defense Against The Dark Arts",
-    school: "Hogwarts School",
+    school: "Hogwarts School of Magic",
     course: ["WIZ1001", "WIZ1012", "WIZ1123", "WIZ2312", "MAG1122", "MAG5679"],
     tag: "wiz",
     favorite: true,

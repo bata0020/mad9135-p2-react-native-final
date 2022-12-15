@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 import { useTutors } from "../../context/tutorContext";
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import { TapGestureHandler } from "react-native-gesture-handler";
 import Animated, {
@@ -25,7 +25,13 @@ function TutorInfoScreen({ route }) {
   const [data] = useTutors();
   const [heartIcon, setHeartIcon] = useState(false);
 
-  const tutor = data.find((item) => item.id === route.params.id);
+  const [tutor, setTutor] = useState({});
+
+  useEffect(() => {
+    setTutor(data.find((item) => item.id === route.params.id));
+  }, []);
+
+  // const tutor = data.find((item) => item.id === route.params.id);
 
   const scale = useSharedValue(0);
 
@@ -61,6 +67,21 @@ function TutorInfoScreen({ route }) {
                     borderColor: "#fff",
                   }}
                 />
+                {tutor.favorite === false ? (
+                  <MaterialIcons
+                    name="favorite"
+                    size={33}
+                    color="#fff"
+                    style={styles.favIcon}
+                  />
+                ) : (
+                  <MaterialIcons
+                    name="favorite"
+                    size={33}
+                    color="#red"
+                    style={styles.favIcon}
+                  />
+                )}
                 {heartIcon ? (
                   <AnimatedIcon
                     name="favorite"
@@ -72,7 +93,7 @@ function TutorInfoScreen({ route }) {
                   <MaterialIcons
                     name="favorite"
                     size={33}
-                    color="#fff"
+                    color="#7c6e7f"
                     style={styles.favIcon}
                   />
                 )}

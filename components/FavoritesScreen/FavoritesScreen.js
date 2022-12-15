@@ -1,22 +1,22 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text, StyleSheet, FlatList } from "react-native";
+import { Text, StyleSheet, FlatList, RefreshControl } from "react-native";
 import { useEffect, useState } from "react";
 import { useTutors } from "../../context/tutorContext";
 import TutorCard from "../TutorCard/TutorCard";
 
 function FavoritesScreen() {
   const [data] = useTutors();
+  const [refreshing, setRefreshing] = useState(true);
   const [favoriteTutor, setFavoriteTutor] = useState([]);
 
   useEffect(() => {
-    setFavoriteTutor(data);
+    setFavoriteTutor(data.filter((person) => person.favorite === true));
+    setRefreshing(false);
   }, []);
-
-  const faves = favoriteTutor.filter((person) => person.favorite === true);
 
   if (!data) {
     return null;
-  } else if (faves.length === 0) {
+  } else if (favoriteTutor.length === 0) {
     return (
       <SafeAreaView style={styles.empty} edges={["right", "left"]}>
         <Text>Favorite tutors will appear here!</Text>
@@ -26,13 +26,18 @@ function FavoritesScreen() {
     return (
       <SafeAreaView style={styles.container} edges={["right", "left"]}>
         <FlatList
-          data={faves}
-          renderItem={({ item }) => (
-            <TutorCard
-              tutor={item}
-              onLongPress={() => console.log((item.favorite = !item.favorite))}
+          data={favoriteTutor}
+          refreshControl={
+            <RefreshControl
+              refreshing={refreshing}
+              onRefresh={() =>
+                setFavoriteTutor(
+                  data.filter((person) => person.favorite === true)
+                )
+              }
             />
-          )}
+          }
+          renderItem={({ item }) => <TutorCard tutor={item} />}
           keyExtractor={(item) => item.id}
         />
       </SafeAreaView>
