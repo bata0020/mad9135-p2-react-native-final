@@ -159,7 +159,7 @@ const allTutors = [
   {
     id: 1,
     image:
-      "https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?h=400&w=400&cs=tinysrgb",
+      "https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?h=720&w=720&cs=tinysrgb",
     tutor: "Diane Douglas",
     program: "Mobile Application Design and Development",
     school: "Algonquin College",
