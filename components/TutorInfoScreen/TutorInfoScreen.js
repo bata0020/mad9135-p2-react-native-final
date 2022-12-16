@@ -30,8 +30,6 @@ function TutorInfoScreen({ route }) {
     setTutor(data.find((item) => item.id === route.params.id));
   }, []);
 
-  // const tutor = data.find((item) => item.id === route.params.id);
-
   const scale = useSharedValue(0);
 
   const animatedStyle = useAnimatedStyle(() => ({
@@ -44,8 +42,15 @@ function TutorInfoScreen({ route }) {
         scale.value = withSpring(1);
       }
     });
-    setHeartIcon(!heartIcon);
-    console.log((tutor.favorite = !tutor.favorite));
+    if (!heartIcon) {
+      setHeartIcon(true);
+      tutor.favorite = true;
+      console.log(true);
+    } else {
+      setHeartIcon(false);
+      tutor.favorite = false;
+      console.log(false);
+    }
   }, [heartIcon]);
 
   if (!tutor) {

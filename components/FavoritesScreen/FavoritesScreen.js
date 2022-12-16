@@ -26,7 +26,9 @@ function FavoritesScreen() {
     return (
       <SafeAreaView style={styles.container} edges={["right", "left"]}>
         <FlatList
-          data={favoriteTutor}
+          data={favoriteTutor.sort((a, b) => {
+            return a.id > b.id ? 1 : -1;
+          })}
           refreshControl={
             <RefreshControl
               refreshing={refreshing}
